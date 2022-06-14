@@ -21,15 +21,15 @@ if ( isNaN(userAge) == true ) {
 
     let userTotal;
     
-    
-    if (userAge > 65) {
-        userTotal = (userCost * 40) / 100;
-        console.log(userTotal.toFixed(2))
-
+    if (userAge >= 65) {
+        userTotal = (userCost * 60) / 100;
+    } else if (userAge <= 18) {
+        userTotal = (userCost * 80) / 100;
     } else {
-        userTotal = (userCost * 20) / 100;
-        console.log(userTotal.toFixed(2))
+        userTotal = userCost;
     }
+
+    console.log(userTotal.toFixed(2) + "€");
 
 }
 
